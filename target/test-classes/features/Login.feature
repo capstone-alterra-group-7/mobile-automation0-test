@@ -1,38 +1,47 @@
 @login
 Feature: As a user i have be able to login so that i can see home screen
 
-  @loginsuccess
+  @loginwithvaliddata
   Scenario: As a user i can login
-    Given user on home page
-    When user click account info
-    When user input valid email
+    Given user on welcome screen page
+    When user skip Welcome Screen and go to login page
+    And user input valid email
     And user input valid password
-    And user click login button
-    Then user back to home page
+    And user click masuk button
+    Then user can login and go to home page
 
-  @loginwithoutemail
-  Scenario: As a user i cant login because i input invalid email
-    Given user on home page1
-    When user click account info1
-    When user input invalid email1
-    And user input valid password1
-    And user click login button1
-    Then user cant login and see error message login1
+  @loginwithinvalidemail
+  Scenario: As a user i cant login because invalid email
+    Given user on welcome screen page2
+    When user skip Welcome Screen and go to login page2
+    And user input invalid email2
+    And user input valid password2
+    And user cant click login, and get warning screen2
+    Then user stay on login screen2
 
-  @loginwithoutpassword
-  Scenario: As a user i cant login because i input invalid password
-    Given user on home page2
-    When user click account info2
-    When user input valid email2
-    And user input invalid password2
-    And user click login button2
-    Then user cant login and see error message login2
-
-  @loginwithoutemailandpassword
-  Scenario: As a user i cant login because i input invalid email and password
-    Given user on home page3
-    When user click account info3
-    When user input invalid email3
+  @loginwithinvalidpassword
+  Scenario: As a user i cant login because invalid password
+    Given user on welcome screen page3
+    When user skip Welcome Screen and go to login page3
+    And user input valid email3
     And user input invalid password3
-    And user click login button3
-    Then user cant login and see error message login3
+    And user cant click login, and get warning screen3
+    Then user stay on login screen3
+
+  @loginwithblankemail
+  Scenario: As a user i cant login because input blank email
+    Given user on welcome screen page4
+    When user skip Welcome Screen and go to login page4
+    And user input blank email4
+    And user input valid password4
+    And user cant click login, and get warning screen "Email tidak boleh kosong"
+    Then user stay on login screen4
+
+  @loginwithblankpassword
+  Scenario: As a user i cant login because input blank password
+    Given user on welcome screen page5
+    When user skip Welcome Screen and go to login page5
+    And user input valid email5
+    And user input blank password5
+    And user cant click login, and get warning screen "Tolong masukkan kata sandi"
+    Then user stay on login screen5
