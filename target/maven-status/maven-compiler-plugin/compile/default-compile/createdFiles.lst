@@ -1,4 +1,2 @@
-test\automation\pageobject\BasePageObject.class
 test\automation\driver\DriverPool.class
 test\automation\driver\AndroidDriverPool.class
-test\automation\Main.class

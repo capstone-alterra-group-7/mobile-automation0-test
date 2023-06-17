@@ -2,6 +2,9 @@ package test.automation.driver;
 
 import io.appium.java_client.Setting;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
+import io.appium.java_client.android.nativekey.PressesKey;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -12,17 +15,19 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class AndroidDriverPool {
+    private static AndroidDriver driver;
+
     public static AndroidDriver create() {
-        String appiumUrl = "http://0.0.0.0:4723/wd/hub/";
-        AndroidDriver driver = null;
+        String appiumUrl = "http://127.0.0.1:4723/wd/hub/";
+        driver = null;
 
         DesiredCapabilities caps = new DesiredCapabilities();
 
         caps.setCapability(AndroidMobileCapabilityType.PLATFORM_NAME, "Android");
 
         caps.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
-        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9.0");
-        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "PIXEL 5 API 28");
+      /*  caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "12.0");
+        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "PIXEL 3 API 31"); */
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 //        caps.setCapability(MobileCapabilityType.NO_RESET, false);
         caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + File.separator + "app/app-release.apk");
@@ -36,5 +41,9 @@ public class AndroidDriverPool {
             e.printStackTrace();
         }
         return driver;
+    }
+
+    public static void pressBack() {
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
     }
 }

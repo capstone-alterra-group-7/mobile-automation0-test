@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: starter.CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.849 s - in starter.CucumberTestSuite
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 1.107 s <<< FAILURE! - in starter.CucumberTestSuite
+As a user i have be able to login so that i can see home screen.As a user i can login  Time elapsed: 0.776 s  <<< ERROR!
+io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in starter.stepdefinitions.LoginStep.userSkipWelcomeScreenPage() and starter.stepdefinitions.UbahKataSandi.userSkippWelcomeScreenAndGoToLoginPage()
+
+As a user i have be able to login so that i can see home screen.As a user i can login  Time elapsed: 0.778 s  <<< ERROR!
+io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in starter.stepdefinitions.LoginStep.userSkipWelcomeScreenPage() and starter.stepdefinitions.UbahKataSandi.userSkippWelcomeScreenAndGoToLoginPage()
+
