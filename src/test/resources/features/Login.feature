@@ -1,7 +1,7 @@
 @login
 Feature: As a user i have be able to login so that i can see home screen
 
-  @loginwithvaliddata
+  @loginWithValidData
   Scenario: As a user i can login
     Given user on welcome screen page
     When user skip Welcome Screen and go to login page
@@ -10,7 +10,7 @@ Feature: As a user i have be able to login so that i can see home screen
     And user click masuk button
     Then user can login and go to home page
 
-  @loginwithinvalidemail
+  @loginWithInvalidEmail
   Scenario: As a user i cant login because invalid email
     Given user on welcome screen page2
     When user skip Welcome Screen and go to login page2
