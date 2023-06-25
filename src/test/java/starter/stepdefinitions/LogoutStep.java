@@ -5,7 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import starter.screen.LogoutScreen;
+import starter.screens.LogoutScreen;
 import test.automation.driver.AndroidDriverPool;
 
 
@@ -25,14 +25,14 @@ public class LogoutStep {
     @And("user input valid email to try logout")
     public void userInputEmail() {
         logout.clickEmailField();
-        logout.inputEmail("admin@gmail.com");
+        logout.inputEmail("newuser2@gmail.com");
 
     }
 
     @And("user input valid password to try logout")
     public void userInputPassword() {
         logout.clickPasswordField();
-        logout.inputPassword("qweqwe123");
+        logout.inputPassword("newuser2");
         AndroidDriverPool.pressBack();
 
     }
@@ -72,14 +72,14 @@ public void userOnLoginScreenPage2() {
     @And("user input valid email to try logout2")
     public void userInputEmail2() {
         logout.clickEmailField();
-        logout.inputEmail("admin@gmail.com");
+        logout.inputEmail("newuser2@gmail.com");
 
     }
 
     @And("user input valid password to try logout2")
     public void userInputPassword2() {
         logout.clickPasswordField();
-        logout.inputPassword("qweqwe123");
+        logout.inputPassword("newuser2");
         AndroidDriverPool.pressBack();
 
     }
@@ -119,14 +119,14 @@ public void userOnLoginScreenPage2() {
     @And("user input valid email to try logout3")
     public void userInputEmail3() {
         logout.clickEmailField();
-        logout.inputEmail("admin@gmail.com");
+        logout.inputEmail("newuser2@gmail.com");
 
     }
 
     @And("user input valid password to try logout3")
     public void userInputPassword3() {
         logout.clickPasswordField();
-        logout.inputPassword("qweqwe123");
+        logout.inputPassword("newuser2");
         AndroidDriverPool.pressBack();
 
     }
