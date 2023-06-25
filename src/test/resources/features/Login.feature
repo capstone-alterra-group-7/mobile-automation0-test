@@ -1,7 +1,7 @@
 @login
 Feature: As a user i have be able to login so that i can see home screen
 
-  @loginwithvaliddata
+  @loginWithValidData
   Scenario: As a user i can login
     Given user on welcome screen page
     When user skip Welcome Screen and go to login page
