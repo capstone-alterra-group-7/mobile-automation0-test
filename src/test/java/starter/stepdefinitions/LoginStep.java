@@ -5,7 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import starter.screen.LoginScreen;
+import starter.screens.LoginScreen;
 import test.automation.driver.AndroidDriverPool;
 
 
@@ -16,7 +16,7 @@ public class LoginStep {
     LoginScreen login;
     private AndroidDriverPool driver;
     @Given("user on welcome screen page")
-    public void UserOnLoginScreenPage() {
+    public void userOnLoginScreenPage() {
         login.validateWelcomeScreen();
     }
     @When("user skip Welcome Screen and go to login page")
@@ -26,13 +26,14 @@ public class LoginStep {
     @And("user input valid email")
     public void userInputEmail() {
         login.clickEmailField();
-        login.inputEmail("admin@gmail.com");
+        login.inputEmail("newuser2@gmail.com");
 
     }
+
     @And("user input valid password")
     public void userInputPassword() {
         login.clickPasswordField();
-        login.inputPassword("qweqwe123");
+        login.inputPassword("newuser2");
         AndroidDriverPool.pressBack();
 
     }
@@ -48,11 +49,11 @@ public class LoginStep {
 
     //////////////////////////////////////////////////////==FITUR 2==//////////////////////////////////////
     @Given("user on welcome screen page2")
-    public void UserOnLoginScreenPage2() {
+    public void userOnLoginScreenPage2() {
         login.validateWelcomeScreen();
     }
     @When("user skip Welcome Screen and go to login page2")
-    public void UserSkipWelcomeScreenPage2() {
+    public void userSkipWelcomeScreenPage2() {
         login.skipWelcomeScreen();
     }
     @And("user input invalid email2")
@@ -65,7 +66,7 @@ public class LoginStep {
     @And("user input valid password2")
     public void userInputPassword2() {
         login.clickPasswordField();
-        login.inputPassword("qweqwe123");
+        login.inputPassword("newuser2");
         AndroidDriverPool.pressBack();
 
     }
@@ -81,24 +82,24 @@ public class LoginStep {
     }
 //////////////////////////////////////////////////////==FITUR 3==//////////////////////////////////////
 @Given("user on welcome screen page3")
-public void UserScreenPage3() {
+public void userOnLoginScreenPage3() {
     login.validateWelcomeScreen();
 }
     @When("user skip Welcome Screen and go to login page3")
-    public void UcomeScreenPage3() {
+    public void userSkipWelcomeScreenPage3() {
         login.skipWelcomeScreen();
     }
     @And("user input valid email3")
     public void userInputEmail3() {
         login.clickEmailField();
-        login.inputEmail("admin@gmail.com");
+        login.inputEmail("newuser2@gmail.com");
 
     }
 
     @And("user input invalid password3")
     public void userInputInvalidPassword3() {
         login.clickPasswordField();
-        login.inputPassword("qweqwe123xx");
+        login.inputPassword("newuser2xx");
         AndroidDriverPool.pressBack();
 
     }
@@ -114,11 +115,11 @@ public void UserScreenPage3() {
 
 //////////////////////////////////////////////////////==FITUR 4==//////////////////////////////////////
     @Given("user on welcome screen page4")
-    public void UserOnLoginScreenPage4() {
+    public void userOnLoginScreenPage4() {
     login.validateWelcomeScreen();
 }
     @When("user skip Welcome Screen and go to login page4")
-    public void UserSkipWelcomeScreenPage4() {
+    public void userSkipWelcomeScreenPage4() {
         login.skipWelcomeScreen();
     }
     @And("user input blank email4")
@@ -131,7 +132,7 @@ public void UserScreenPage3() {
     @And("user input valid password4")
     public void userInputPassword4() {
         login.clickPasswordField();
-        login.inputPassword("qweqwe123");
+        login.inputPassword("newuser2");
         AndroidDriverPool.pressBack();
 
     }
@@ -148,17 +149,17 @@ public void UserScreenPage3() {
     //////////////////////////////////////////////////////==FITUR 5==//////////////////////////////////////
 
     @Given("user on welcome screen page5")
-    public void UScreenPage5() {
+    public void userOnLoginScreenPage5() {
         login.validateWelcomeScreen();
     }
     @When("user skip Welcome Screen and go to login page5")
-    public void UserSkipWelcomeScreenPage5() {
+    public void userSkipWelcomeScreenPage5() {
         login.skipWelcomeScreen();
     }
     @And("user input valid email5")
     public void userInputEmail5() {
         login.clickEmailField();
-        login.inputEmail("admin@gmail.com");
+        login.inputEmail("newuser2@gmail.com");
 
     }
 
